@@ -31,11 +31,12 @@ This will return the following json object:
 
 ```json
 {
-    waste_type: "gft",
-    pickup_date: "2022-09-29",
-    description: "Groente, Fruit en Tuinafval en Etensresten"
+    "waste_type": "gft",
+    "pickup_date": "2022-09-29",
+    "description": "Groente, Fruit en Tuinafval en Etensresten"
 }
 ```
+The output of this endpoint could be used as a Json sensor in Home Assistant.
 
 It's also possible to retrieve an iCal file containing the next pickup moments of this year:
 
