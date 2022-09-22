@@ -33,12 +33,11 @@ async def fetch_pickup_moments(postal_code: str, number: str, suffix: str = "") 
                         waste_type = item.p["class"][0]
 
                 description = item.find("span", {"class": "afvaldescr"}).text.replace("\\,", ",")
-                print(description)
 
                 result.append(PickupMoment(
                     waste_type=waste_type,
                     pickup_date=_convert_date(item.find("span", {"class": "span-line-break"}).text),
-                    description=item.find("span", {"class": "afvaldescr"}).text.replace("\\,", ","),
+                    description=description,
                 ))
 
     return result
